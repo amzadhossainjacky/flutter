@@ -1,3 +1,4 @@
+import 'package:firstapp/utils/myroutes.dart';
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatelessWidget {
@@ -17,7 +18,7 @@ class LoginPage extends StatelessWidget {
           ),
           Text(
             "Welcome",
-            style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+            style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
           ),
           SizedBox(
             height: 10.0,
@@ -43,9 +44,12 @@ class LoginPage extends StatelessWidget {
                   height: 20.0,
                 ),
                 ElevatedButton(
-                  child: Text("Login"),
+                  child: Text("Login",
+                      style:
+                          TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
+                  style: TextButton.styleFrom(minimumSize: Size(100, 40)),
                   onPressed: () {
-                    print("login");
+                    Navigator.pushNamed(context, MyRoutes.homeRoute);
                   },
                 )
               ],
